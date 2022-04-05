@@ -36,7 +36,7 @@ function appointment() {
     console.log(newData)
     setSubmitOnProgress(true)
     setTimeout(async () => {
-      const res = await fetch('http://localhost:3000/api/schedule', {
+      const res = await fetch('/api/schedule', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
