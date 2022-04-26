@@ -5,11 +5,32 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridColumn: {
+        'span-custom-1': '1',
+        'span-custom-2': '2',
+        'span-custom-3': '3',
+        'span-custom-4': '4',
+        'span-custom-5': '5',
+        'span-custom-6': '6',
+        'span-custom-7': '7',
+      },
       minWidth: {
+        searchModal: '750px',
         sideBar: '22em',
+        selectedDate: '310px',
+        requestBtn: '100px',
+        timeModal: '430px',
       },
       maxWidth: {
         sideBar: '10em',
+        selectedDate: '500px',
+      },
+      maxHeight: {
+        patientModal: 'calc(100vh - 10em)',
+      },
+      minHeight: {
+        searchModal: '10em',
+        selectedDate: '20em',
       },
       spacing: {
         contactFix: '1.05em',
@@ -30,6 +51,9 @@ module.exports = {
         secondaryBtn: '#3C3C41',
         customRed: '#ED3F3F',
         customOrange: '#ED933F',
+      },
+      inset: {
+        '94px': '94px',
       },
     },
   },

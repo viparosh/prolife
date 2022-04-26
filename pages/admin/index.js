@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/Layout'
-import AppointmentCard from '../../components/AppointmentCard'
+import { AppointmentCard } from '../../components'
 function Appointment() {
   // const { schedules, monthYear } = appointment
   const data = {

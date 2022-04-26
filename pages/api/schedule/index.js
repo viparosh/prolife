@@ -37,11 +37,16 @@ export default async (req, res) => {
             firstNameError: err.firstName?.message,
             lastNameError: err.lastName?.message,
             addressError: err.address?.message,
-            contactError: err.contact?.message,
+            contactError:
+              err.contact?.properties.type != 'minlength'
+                ? err.contact?.message
+                : 'Invalid Phone number',
             concernError: err.concern?.message,
             dateError: err.date?.message,
             timeError: err.time?.message,
+            verification_codeError: err.verification_code?.message,
           },
+          message: err.contact?.properties.type,
         })
       }
       break

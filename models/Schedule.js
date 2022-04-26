@@ -5,31 +5,39 @@ const ScheduleSchema = new mongoose.Schema(
     firstName: {
       type: String,
       required: [true, 'Please input the required fields'],
-      maxlength: [30, 'First Name cannot be more than 30 characters'],
+      maxlength: 30,
     },
     lastName: {
       type: String,
       required: [true, 'Please input the required fields'],
-      maxlength: [30, 'Last Name cannot be more than 30 characters'],
+      maxlength: 30,
     },
     contact: {
-      type: Number,
+      type: String,
       required: [true, 'Please input the required fields'],
-      minlength: [10, 'Phone number must have 10 digits'],
-      maxlength: [10, 'Phone number must have 10 digits'],
+      lowercase: true,
+      minlength: 10,
+      maxlength: 10,
+    },
+    consultation: {
+      type: String,
     },
     address: {
       type: String,
       required: [true, 'Please input the required fields'],
-      maxlength: [200, 'Address cannot be more than 200 characters'],
+      maxlength: 200,
     },
     concern: {
       type: String,
       required: [true, 'Please input the required fields'],
-      maxlength: [200, 'Concern cannot be more than 200 characters'],
+      maxlength: 200,
     },
     time: {
-      type: String,
+      type: {
+        from: { type: Date },
+        to: { type: Date },
+        status: { type: Boolean },
+      },
       required: [true, 'Please input the required fields'],
     },
     date: {

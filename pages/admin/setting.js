@@ -1,9 +1,10 @@
 import React from 'react'
+import FeatureLayout from '../../components/FeatureLayout'
 import Layout from '../../components/Layout'
 function setting() {
   return (
-    <Layout title="Settings">
-      <div>setting</div>
+    <Layout title="Account Settings">
+      <FeatureLayout />
     </Layout>
   )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import { FeatureLayout } from '../../components'
 import Layout from '../../components/Layout'
 
 function balance() {
   return (
     <Layout title="Balances">
-      <div>balance</div>
+      <FeatureLayout />
     </Layout>
   )
 }
