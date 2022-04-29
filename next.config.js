@@ -8,8 +8,8 @@ module.exports = {
 
     return config
   },
-  reactStrictMode: false,
-  webpack5: true,
+  // reactStrictMode: false,
+  // webpack5: true,
   optimizeFonts: false,
   // env: {
   //   MONGO_URI:
