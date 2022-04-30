@@ -25,7 +25,7 @@ const calendar = () => {
     default_value: null,
     root: '',
   })
-
+ 
   const setAction = (e) => {
     setSelection(e.target.value)
   }
@@ -76,7 +76,7 @@ const calendar = () => {
             {fetchData.length ? (
               <div className="mt-4">
                 <p className="font-semibold text-secondaryText">
-                  {moment(fetchData[0].date).format('MMMM DD, YYYY')}
+                  {moment(fetchData[0].date).tz('Asia/Manila').format('MMMM DD, YYYY')}
                 </p>
                 <div>
                   {selection == mode[0] ? (

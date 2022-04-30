@@ -1,5 +1,5 @@
 import moment from 'moment'
-const newDate = moment()
+const newDate = moment().tz('Asia/Manila')
 export const startDays = (date) => {
   return (moment(date).day() + 1).toString()
 }

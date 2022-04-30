@@ -44,6 +44,7 @@ function appointment() {
       if (!timer.active) {
         const expiration = await checkExpiration(contactRef.current.value)
         if (expiration !== false) {
+          console.log(expiration)
           setTimer({ active: true, value: expiration })
         }
       }
@@ -78,8 +79,8 @@ function appointment() {
       }, 1000)
     }
     const load = async () => {
-      console.log('dates', dates)
-      console.log('prevDate', prevStateDates.current)
+      // console.log('dates', dates)
+      // console.log('prevDate', prevStateDates.current)
       if (
         dates != prevStateDates.current ||
         consultation != prevStateConsultation.current
