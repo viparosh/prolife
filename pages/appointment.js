@@ -288,6 +288,8 @@ function appointment() {
                   timeslot: formattedTimeslot.current            
                 })
 
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
                 await sendSmsNote({
                   part:2,
                   contact: newData.contact,

@@ -7,7 +7,7 @@ export default async (req, res) => {
         await fetch(URI, {
           method: "POST",
           body: JSON.stringify({
-            message: `Blessed Hope Maternity Lying-in Clinic\n\n Your verification code is ${req.body.verification_code}\n\n`,
+            message: `Blessed Hope Maternity Lying-in Clinic\n\n Your verification code is ${req.body.verification_code}`,
             number: `63${req.body.mobile_number}`,
             apikey: process.env.SMS_API
           }),
