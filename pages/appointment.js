@@ -293,7 +293,7 @@ function appointment() {
                   contact: newData.contact,
                   cancellationCode: newData.cancellationCode
                 })
-
+                
                 setSuccess(true)
               } else {
                 setSuccess(false)

@@ -41,7 +41,7 @@ const Login = () => {
   return (
     <NoLayout>
       <div className="flex min-h-screen w-full items-center justify-center">
-        <div className='hidden w-2/3 min-h-screen bg-themeViolet items-center justify-center lg:flex'>
+        <div className='hidden w-2/3 min-h-screen bg-themeViolet lg:flex'>
           <div className="flex gap-4 flex-col items-start justify-between p-16">
           <div className="flex w-full cursor-pointer flex-col">
             <p className="text-justify text-5xl text-white">
@@ -53,12 +53,12 @@ const Login = () => {
           </div>
           <div className="flex w-full  gap-4 flex-row items-center justify-center">
             <img
-              className="w-[20rem] aspect-square"
+              className="hidden xl:block w-[20rem] aspect-square"
               src={
                 'https://firebasestorage.googleapis.com/v0/b/mtathos-a572c.appspot.com/o/utilityImages%2FhighlightA.png?alt=media&token=6ea15677-42cf-49ba-ae29-350d5386fa14'
               }
             />
-            <div className="flex w-full flex-col items-center justify-center">
+            <div className="px-11 flex w-full flex-col items-center justify-center">
               <div className="flex w-full flex-col">
                 <p className="my-6 font-semibold text-white ">Vision</p>
                 <p className="text-sm text-justify indent-5 text-white">
