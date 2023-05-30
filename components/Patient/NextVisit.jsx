@@ -119,45 +119,47 @@ const NextVisit = () => {
           Notify All
         </button>
       </div>
-      <table className="my-4 w-full border-collapse border border-slate-400">
-        <thead>
-          <tr>
-            <th className="border border-slate-300 p-4">Date</th>
-            <th className="border border-slate-300 p-4">Name</th>
-            <th className="border border-slate-300 p-4">Contact</th>
-            <th className="border border-slate-300">Prenatal #</th>
-            <th className="border border-slate-300 p-4">Month</th>     
-            <th className="border border-slate-300 p-4">Visit</th>
-          </tr>
-        </thead>
-        <tbody>
-          {schedule?.length > 0 ? (
-            schedule.map(
-              ({ date, name, contact, pregnancyNo, month, visit }, index) => (
-                <tr key={index} className="text-center">
-                  <td className="border border-slate-300 p-4">
-                    {moment(date).format('MMM DD, YYYY')}
-                  </td>
-                  <td className="border border-slate-300 p-4">{name.charAt(0).toUpperCase() + name.slice(1)}</td>
-                  <td className="border border-slate-300 p-4">{contact}</td>
-                  <td className="uppercase border border-slate-300 p-4">{pregnancyNo}</td>
-                  <td className="border border-slate-300 p-4">{month}</td>
-                  <td className="border border-slate-300 p-4">{visit}</td>
-                </tr>
-              )
-            )
-          ) : (
+      <div className="overflow-auto">
+        <table className="my-4 w-full border-collapse border border-slate-400">
+          <thead>
             <tr>
-              <td
-                colSpan={5}
-                className="border border-slate-300 p-4 text-center"
-              >
-                No data
-              </td>
+              <th className="border border-slate-300 px-8 py-6">Date</th>
+              <th className="border border-slate-300 p-6">Name</th>
+              <th className="border border-slate-300 p-6">Contact</th>
+              <th className="border border-slate-300 p-6">Prenatal #</th>
+              <th className="border border-slate-300 p-6">Month</th>     
+              <th className="border border-slate-300 p-6">Visit</th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {schedule?.length > 0 ? (
+              schedule.map(
+                ({ date, name, contact, pregnancyNo, month, visit }, index) => (
+                  <tr key={index} className="text-center">
+                    <td className="border border-slate-300 p-4">
+                      {moment(date).format('MMM DD, YYYY')}
+                    </td>
+                    <td className="border border-slate-300 p-4">{name.charAt(0).toUpperCase() + name.slice(1)}</td>
+                    <td className="border border-slate-300 p-4">{contact}</td>
+                    <td className="uppercase border border-slate-300 p-4">{pregnancyNo}</td>
+                    <td className="border border-slate-300 p-4">{month}</td>
+                    <td className="border border-slate-300 p-4">{visit}</td>
+                  </tr>
+                )
+              )
+            ) : (
+              <tr>
+                <td
+                  colSpan={5}
+                  className="border border-slate-300 p-4 text-center"
+                >
+                  No data
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
 
       <div className="mb-5 flex flex-row justify-between items-center w-full">
         <button onClick={clickPrevious} className="py-2 text-sm px-5 bg-gray-600 text-white rounded-md border">Previous</button>

@@ -3,7 +3,7 @@ import moment from 'moment'
 
 const AppointmentCard = ({ schedules, setSelected }) => {
   return (
-    <div className="sticky top-0 mx-4 flex w-full flex-col">
+    <div className="overflow-hidden sticky top-0 mx-4 flex w-full flex-col">
       <div className="w-full rounded-3xl bg-white p-4 drop-shadow-md">
         {schedules &&
           schedules?.schedule?.map(
@@ -23,7 +23,7 @@ const AppointmentCard = ({ schedules, setSelected }) => {
               },
               index
             ) => (
-              <div className="cursor-pointer p-4" key={index}>
+              <div className="overflow-auto scrollbar-thin scrollbar-thumb-white-400 scrollbar-track-white-200 cursor-pointer p-4" key={index}>
                 <div key={index} className="border-b-2 border-dashed">
                   <p className="pb-4 text-xl font-semibold text-primary">
                     {moment(time.from).format('h:mm A')} -

@@ -401,7 +401,7 @@ const General = ({
 
             <p className="py-4">Baby Information</p>
             <div className="flex flex-col border-b-2 border-dashed border-slate-400 pb-4">
-              <div className="flex gap-x-4 overflow-auto">
+              <div className="flex flex-col lg:flex-row gap-y-2 lg:gap-x-2 w-full">
                 {mode ? (
                   <>
                     <input
@@ -426,32 +426,32 @@ const General = ({
                 ) : (
                   <>
                     {selectedSession.ultrasound1 == '' ? (
-                      <div className="flex h-[14rem] w-[14rem] items-center justify-center rounded-md border">
+                      <div className="flex h-[14rem] md:w-1/3 w-full items-center justify-center rounded-md border">
                         No Image
                       </div>
                     ) : (
                       <img
-                        className="h-[14rem] w-[14rem]"
+                        className="h-[14rem] md:w-1/3 w-full"
                         src={selectedSession.ultrasound1}
                       />
                     )}
                     {selectedSession.ultrasound2 == '' ? (
-                      <div className="flex h-[14rem] w-[14rem] items-center justify-center rounded-md border">
+                      <div className="flex h-[14rem] md:w-1/3 w-full items-center justify-center rounded-md border">
                         No Image
                       </div>
                     ) : (
                       <img
-                        className="h-[14rem] w-[14rem]"
+                        className="h-[14rem] md:w-1/3 w-full"
                         src={selectedSession.ultrasound2}
                       />
                     )}
                     {selectedSession.ultrasound3 == '' ? (
-                      <div className="flex h-[14rem] w-[14rem] items-center justify-center rounded-md border">
+                      <div className="flex h-[14rem] md:w-1/3 w-full items-center justify-center rounded-md border">
                         No Image
                       </div>
                     ) : (
                       <img
-                        className="h-[14rem] w-[14rem]"
+                        className="h-[14rem] md:w-1/3 w-full "
                         src={selectedSession.ultrasound3}
                       />
                     )}

@@ -19,11 +19,11 @@ const settings = () => {
 
   return (
     <Layout title="Account Settings" role="Patient">
-      <div className="flex flex-row gap-x-5">
-        <div className="w-1/2">
+      <div className="flex space-y-4 flex-col lg:flex-row gap-x-5">
+        <div className="w-full">
           <ChangePassword authUser={authUser} role="Patient" />
         </div>
-        <div className="w-1/2 border-secondary rounded-md border px-4 py-4">
+        <div className="w-full border-secondary rounded-md border px-4 py-4">
           <p>
             <b>Patient Tools</b>
           </p>
@@ -32,7 +32,7 @@ const settings = () => {
               {' ('+authUser?.username+')'}
             </span> when creating transaction
           </p>
-          <div className="flex flex-row gap-x-4">
+          <div className="flex-col flex space-y-2 md:flex-row gap-x-4">
             <Link href="/appointment">
               <button className="w-full cursor-pointer rounded-md bg-gray-600 p-2 text-white text-sm ">
                 Create Appointment

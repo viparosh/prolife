@@ -113,7 +113,7 @@ const ChangeProfile = ({
   return (
     <>
       <div className="fixed top-0 left-0 z-30 flex h-screen w-screen items-center justify-center bg-black/50">
-        <div className="w-2/5 rounded-md bg-white px-7 py-5">
+        <div className="w-full lg:w-1/3 m-4 rounded-md bg-white px-5 py-3">
           <div className="mb-5 w-full flex items-center justify-between">
             <p className="text-xl">Change Picture</p>
             <button
