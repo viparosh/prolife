@@ -288,7 +288,7 @@ function appointment() {
                   timeslot: formattedTimeslot.current            
                 })
 
-                await new Promise(resolve => setTimeout(resolve, 2000));
+                await new Promise(resolve => setTimeout(resolve, 5000));
                 
                 await sendSmsNote({
                   part:2,
